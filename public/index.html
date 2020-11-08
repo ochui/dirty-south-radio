@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Dirty South Radio </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- TODO: Enable First Input Delay polyfill library. -->
+    <script type="text/javascript">
+        ! function(n, e) {
+            var t, o, i, c = [],
+                f = {
+                    passive: !0,
+                    capture: !0
+                },
+                r = new Date,
+                a = "pointerup",
+                u = "pointercancel";
+
+            function p(n, c) {
+                t || (t = c, o = n, i = new Date, w(e), s())
+            }
+
+            function s() {
+                o >= 0 && o < i - r && (c.forEach(function(n) {
+                    n(o, t)
+                }), c = [])
+            }
+
+            function l(t) {
+                if (t.cancelable) {
+                    var o = (t.timeStamp > 1e12 ? new Date : performance.now()) - t.timeStamp;
+                    "pointerdown" == t.type ? function(t, o) {
+                        function i() {
+                            p(t, o), r()
+                        }
+
+                        function c() {
+                            r()
+                        }
+
+                        function r() {
+                            e(a, i, f), e(u, c, f)
+                        }
+                        n(a, i, f), n(u, c, f)
+                    }(o, t) : p(o, t)
+                }
+            }
+
+            function w(n) {
+                ["click", "mousedown", "keydown", "touchstart", "pointerdown"].forEach(function(e) {
+                    n(e, l, f)
+                })
+            }
+            w(n), self.perfMetrics = self.perfMetrics || {}, self.perfMetrics.onFirstInputDelay = function(n) {
+                c.push(n), s()
+            }
+        }(addEventListener, removeEventListener);
+    </script>
+
+</head>
+
+<body>
+    <nav class="navbar sticky-top navbar-light shadow ">
+        <div class="navbarr">
+            <p>Brand</p>
+            <div>
+                <button type="button" class="btn btn-light btn-sm" name="button">Login</button>
+                <button type="button" class="btn btn-primary btn-sm ml-auto" name="button">SignUp</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <div class="left_pane">
+            <iframe src="https://tvstartup2.biz/mng-channel/vpanel/live_clappr.php?user=dsr&pass=117b515c325e61be0d20f5bfa30fada0" seamless="seamless" allowfullscreen="true" scrolling="no" frameBorder="0" width="100%" height="600"> </iframe>
+            <div class="details">
+                <img src="images/dirty-south-radio.png" alt="logo">
+                <div class="details__names">
+                    <p>Dirty South Radio</p>
+                    <p>Dirty South Radio - The number one dirty south internet radio.</p>
+                    <a href="#">Music</a>
+                    <a href="#" class="details__names__tag">English</a>
+                </div>
+                <div class="details__sub">
+                    <button type="button" class="btn btn-primary btn-sm " name="button">Follow</button>
+                    <button type="button" name="button" class="btn btn-sm btn-light">Subscribe</button>
+                </div>
+            </div>
+            <div class="about">
+                <div class="about__left text-center">
+                    <img src="images/dirty-south-radio.png" alt="logo">
+                    <p>20,704</p>
+                    <p>Followers</p>
+                </div>
+                <div class="about__middile">
+                    <h2>About Dirty South Radio</h2>
+                    <p>Dirty South Radio is an internet radio station from Washington, DC, United States providing Hip Hop, Rap music 24 hours a day.</p>
+                </div>
+                <div class="about__right">
+                    <div>
+                        <i class="fa fa-twitter" aria-hidden="true"><span>Twitter</span></i>
+                    </div>
+                    <div>
+
+                        <i class="fa fa-youtube-play" aria-hidden="true"><span>Youtube</span></i>
+                    </div>
+                    <div>
+
+                        <i class="fa fa-instagram" aria-hidden="true"><span>Instagram</span></i>
+                    </div>
+                    <div class="">
+
+                        <i class="fa fa-reddit" aria-hidden="true"><span>Reddit</span></i>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="right_pane">
+            <div class="text-center pt-3">
+                <p>Stream Chat</p>
+                <hr>
+            </div>
+            <div class="chat-area">
+                <p class="text-muted">Welcome to the chat room</p>
+                <p class="mt-2">Loren : Hello there</p>
+            </div>
+            <div class="send-message">
+                <input type="text" name="" value="" placeholder="Send message">
+                <button type="button" class="btn btn-primary btn-sm ml-auto" name="button">Send</button>
+            </div>
+        </div>
+    </div>
+    <!-- Import and configure the Firebase SDK -->
+    <!-- These scripts are made available when the app is served or deployed on Firebase Hosting -->
+    <!-- If you do not want to serve/host your project using Firebase Hosting see https://firebase.google.com/docs/web/setup -->
+    <script src="/__/firebase/7.24.0/firebase-app.js"></script>
+    <script src="/__/firebase/7.24.0/firebase-auth.js"></script>
+    <script src="/__/firebase/7.24.0/firebase-storage.js"></script>
+    <script src="/__/firebase/7.24.0/firebase-messaging.js"></script>
+    <script src="/__/firebase/7.24.0/firebase-firestore.js"></script>
+    <script src="/__/firebase/7.24.0/firebase-performance.js"></script>
+    <script src="/__/firebase/init.js"></script>
+
+    <script src="scripts/main.js"></script>
+
+</body>
+
+</html>
