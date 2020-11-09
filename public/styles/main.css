@@ -103,6 +103,7 @@ nav {
 
 .chat-area {
     height: 68vh;
+    overflow-y: auto;
 }
 
 .send-message {
