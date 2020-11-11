@@ -68,8 +68,8 @@
         <div class="navbarr">
             <p>Dirty South Radio</p>
             <div>
-                <button type="button" class="btn btn-light btn-sm" name="button">Login</button>
-                <button type="button" class="btn btn-primary btn-sm ml-auto" name="button">SignUp</button>
+                <button type="button" class="btn btn-light btn-sm" name="button" onclick="login()">Login</button>
+                <button type="button" class="btn btn-primary btn-sm ml-auto" name="button" onclick="signup()">SignUp</button>
             </div>
         </div>
     </nav>
@@ -87,7 +87,7 @@
                 </div>
                 <div class="details__sub">
                     <button type="button" class="btn btn-primary btn-sm " name="button">Follow</button>
-                    <button type="button" name="button" class="btn btn-sm btn-light">Subscribe</button>
+                    <button type="button" name="button" class="btn btn-sm btn-light" onclick="sub()">Subscribe</button>
                 </div>
             </div>
             <div class="about">
@@ -232,6 +232,7 @@
                 <button type="button" class="btn btn-primary btn-sm ml-auto" name="button">Send</button>
             </div>
         </div>
+        <div class="modall"></div>
     </div>
     <!-- Import and configure the Firebase SDK -->
     <!-- These scripts are made available when the app is served or deployed on Firebase Hosting -->
@@ -245,6 +246,8 @@
     <script src="/__/firebase/init.js"></script>
 
     <script src="scripts/main.js"></script>
+    <script src="scripts/modal.js"></script>
+
 
 </body>
 
